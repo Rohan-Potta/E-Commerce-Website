@@ -1,0 +1,50 @@
+image: python:3.8.6-alpine3.11-ce
+
+default:
+  tags:
+   - zemo
+
+variables:
+  DOCKER_REGISTRY: registry.gitlab.com/wavelabs/devops-training-ai-2024 
+  APP_NAME: libra-devops-app
+  TAG: "libra-$CI_PIPELINE_ID"
+  TAG_PROD: "release_2.7.0"
+  DOCKER_DRIVER: overlay2
+  DOCKER_TLS_CERTDIR: "/certs"
+
+stages:  
+  - build-libra-app
+  - deploy-libra-app
+
+Build libra docker image: 
+  only:
+    - libra
+  stage: build-libra-app
+  image: 
+    name: docker:22.06.0-beta.0
+  services:
+    - docker:22.06.0-beta.0-dind
+  before_script:
+    - echo $CI_REGISTRY_PASSWORD | docker login -u $CI_REGISTRY_USER $CI_REGISTRY --password-stdin
+    - docker --version
+
+  script:
+    - docker build -t registry.gitlab.com/wavelabs/devops-training-ai-2024:libra .
+    - docker tag registry.gitlab.com/wavelabs/devops-training-ai-2024:libra $DOCKER_REGISTRY:"$TAG"
+    - echo $TAG
+    - docker push $DOCKER_REGISTRY:"$TAG"
+
+Deploy libra docker image:
+  rules:
+    - if: $CI_COMMIT_BRANCH == 'libra' 
+  #    when: manual
+
+  stage: deploy-libra-app
+  before_script:
+    - sudo apt install openssh-client
+    - eval $(ssh-agent -s)
+    - echo "$DEV" | tr -d '\r' | ssh-add -
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+  script:
+    - ssh -o StrictHostKeyChecking=no $DEV_ENV "cd /home/ubuntu/libra && chmod 777 changeTag_libra.sh && ./changeTag_libra.sh $TAG && kubectl apply -f libra.yaml"

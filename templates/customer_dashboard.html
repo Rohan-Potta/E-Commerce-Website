@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Customer_dashboard_styles.css') }}">
+</head>
+<body>
+    
+    <div class="container">
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div class="flash-messages">
+                {% for category, message in messages %}
+                    <div class="flash-message {{ category }}">{{ message }}</div>
+                {% endfor %}
+            </div>
+        {% endif %}
+        {% endwith %}
+
+        <div class="top-ribbon">
+            <div class="buttons-container">
+                <a href="/cart" class="view-cart">View Cart</a>
+                <a href="/login" class="signout-button">Sign Out</a>
+            </div>
+        </div> 
+        
+        <h1>Products</h1>
+        <div class="products">
+            {% for product in products %}
+            <div class="product">
+                <h2>{{ product.name }}</h2>
+                <p>Description: {{ product.description }}</p>
+                <p>Price: ${{ product.price }}</p>
+                <form action="/cart/add" method="POST">
+                    <input type="hidden" name="name" value="{{ product.name }}">
+                    <button type="submit">Add to Cart</button>
+                </form>                
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+<script>
+    // Function to remove flash message after 3 seconds
+    setTimeout(function() {
+        var flashMessages = document.querySelectorAll('.flash-message');
+        flashMessages.forEach(function(message) {
+            message.remove();
+        });
+    }, 3000);
+</script>
+
+
+</html>

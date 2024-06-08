@@ -1,0 +1,32 @@
+[{
+  "_id": {
+    "$oid": "662a1836808fd1de02248f5e"
+  },
+  "username": "rohan",
+  "password": "scrypt:32768:8:1$TWXW6tfAYkMiLPL5$fb63863a2e6287d3bc43bd23f864af1d29b86929058daf159e1b3ff5b073b55c4a18b36af58b1beea0020867a972a19827f38b23c44c0a7e84a5b07a306c72a2",
+  "role": "customer"
+},
+{
+  "_id": {
+    "$oid": "662a18d797208fa475a8f6a9"
+  },
+  "username": "rohan2",
+  "password": "scrypt:32768:8:1$qZmr2ppWtKUYkGih$2a91fb94c7f1f0831158875f41f728b23084a7f92569eac153e50994ad0ec45cad30927bcf7e39af50deb0d96f4439da6d3a68e373ded1106749a83d470beefc",
+  "role": "seller"
+},
+{
+  "_id": {
+    "$oid": "662a473f45af29bc5ab19f4c"
+  },
+  "username": "test1",
+  "password": "scrypt:32768:8:1$sN4YoJYby3lzJR2o$3389afdf94bc7bd9c39f9aed9b1d16306786e5ec1fc1a9b2e6158c43d8a499d9fcf542041cc89e87b7d12084543b800225a75060aef6996cfec8606859673ca1",
+  "role": "customer"
+},
+{
+  "_id": {
+    "$oid": "662a474f45af29bc5ab19f4d"
+  },
+  "username": "test2",
+  "password": "scrypt:32768:8:1$BbhOXI4XUKSN0qtw$1e77793d1d201e323d60c0e407ae506caf86d69c64f12ebcff44047360ae0ddb6c5843f2c194126392a8c375d09e57f6ba27c74e8807278bb80c8065bbb950b0",
+  "role": "seller"
+}]

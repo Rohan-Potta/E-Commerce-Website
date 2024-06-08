@@ -1,0 +1,108 @@
+[{
+  "_id": {
+    "$oid": "662a1bdffa6702b96f117b7b"
+  },
+  "name": "Laptop",
+  "description": "High-performance laptop with Intel Core i7 processor and 16GB RAM.",
+  "price": 1299.99,
+  "category": "Electronics"
+},
+{
+  "_id": {
+    "$oid": "662a1bdffa6702b96f117b7c"
+  },
+  "name": "Smartphone",
+  "description": "Latest smartphone with 6.5-inch OLED display and dual rear cameras.",
+  "price": 899.99,
+  "category": "Electronics"
+},
+{
+  "_id": {
+    "$oid": "662a1bdffa6702b96f117b7d"
+  },
+  "name": "Wireless Headphones",
+  "description": "Noise-canceling wireless headphones with up to 30 hours of battery life.",
+  "price": 199.99,
+  "category": "Electronics"
+},
+{
+  "_id": {
+    "$oid": "662a1bdffa6702b96f117b7e"
+  },
+  "name": "Running Shoes",
+  "description": "High-quality running shoes with breathable mesh upper and cushioned sole.",
+  "price": 79.99,
+  "category": "Sports & Outdoors"
+},
+{
+  "_id": {
+    "$oid": "662a1bdffa6702b96f117b7f"
+  },
+  "name": "Digital Camera",
+  "description": "Compact digital camera with 20MP sensor and 4K video recording.",
+  "price": 499.99,
+  "category": "Electronics"
+},
+{
+  "_id": {
+    "$oid": "662a1bdffa6702b96f117b80"
+  },
+  "name": "Coffee Maker",
+  "description": "Programmable coffee maker with built-in grinder and 12-cup capacity.",
+  "price": 59.99,
+  "category": "Home & Kitchen"
+},
+{
+  "_id": {
+    "$oid": "662a1bdffa6702b96f117b81"
+  },
+  "name": "Bluetooth Speaker",
+  "description": "Portable Bluetooth speaker with waterproof design and 20W output.",
+  "price": 49.99,
+  "category": "Electronics"
+},
+{
+  "_id": {
+    "$oid": "662a1bdffa6702b96f117b82"
+  },
+  "name": "Yoga Mat",
+  "description": "Eco-friendly yoga mat with non-slip surface and carrying strap.",
+  "price": 29.99,
+  "category": "Sports & Outdoors"
+},
+{
+  "_id": {
+    "$oid": "662a1bdffa6702b96f117b83"
+  },
+  "name": "Cookware Set",
+  "description": "Non-stick cookware set with frying pans, saucepans, and utensils.",
+  "price": 129.99,
+  "category": "Home & Kitchen"
+},
+{
+  "_id": {
+    "$oid": "662a1bdffa6702b96f117b84"
+  },
+  "name": "Gaming Mouse",
+  "description": "High-precision gaming mouse with customizable RGB lighting and programmable buttons.",
+  "price": 69.99,
+  "category": "Electronics"
+},
+{
+  "_id": {
+    "$oid": "662a241c1ffc48c8a7f3e127"
+  },
+  "name": "Jeans",
+  "description": "These are comfortable and affordable pair of jeans",
+  "price": 20,
+  "category": "Clothing"
+},
+{
+  "_id": {
+    "$oid": "662a475945af29bc5ab19f4e"
+  },
+  "name": "yolo",
+  "description": "update",
+  "price": 2,
+  "category": "updated"
+}]
