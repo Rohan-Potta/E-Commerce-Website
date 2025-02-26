@@ -29,8 +29,10 @@ The objective of the application was to practice the the tools of devops from Do
 ![AWS Architecture](AWS-Architecture.jpg)
 
 ## CI/CD Pipeline
-
 Libra uses GitLab CI/CD for automated builds, testing, and deployment. The pipeline:
 - Builds and tests the application.
 - Pushes the Docker image to a container registry.
 - Deploys to the Kubernetes cluster.
+
+## Terraform Scripts 
+The Terraform scripts in the Terraform folder are used to spin up resources for an Amazon EKS cluster on AWS. These scripts provision a master node, worker node, and a VPC in the ap-northeast-3 region.
