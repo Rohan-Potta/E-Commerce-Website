@@ -17,9 +17,7 @@ provider "aws" {
   region = "ap-northeast-3"
   default_tags {
     tags = {
-      env     = var.environment
       Owner   = "devops"
-      Project = var.project
     }
   }
 }
